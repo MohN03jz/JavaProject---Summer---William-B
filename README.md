@@ -1,4 +1,4 @@
-# JavaProject---Summer---William-B
+# JavaProject---Summer---
 Description- 
 Submission of a game library for our Java course that aims to create a complete sum of owned games across all platforms the user owns
 - rather than individualized libraries on certain applications like Steam.
