@@ -1,0 +1,293 @@
+/* =====================================================================
+   Frutiger Aero theme
+   Glossy glass panels, soft blue/teal gradients, bright highlight
+   streaks, and gentle glow — the mid-2000s "Aero" look.
+   ===================================================================== */
+
+.root-pane {
+    -fx-font-family: "Segoe UI", "Verdana", sans-serif;
+    -fx-background-color:
+        /* soft light bloom, upper-left */
+        radial-gradient(center 18% 8%, radius 55%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
+        /* soft teal bloom, lower-right */
+        radial-gradient(center 88% 92%, radius 55%, rgba(190,255,240,0.18) 0%, rgba(190,255,240,0) 65%),
+        /* base sky gradient: pale aqua -> sky blue -> deep teal-blue */
+        linear-gradient(to bottom, #eaf9ff 0%, #bfe9fb 12%, #7fd0ee 30%, #3fa8d9 55%, #1f6f9e 80%, #124f74 100%);
+}
+
+/* ---------- Top bar (chrome / glass toolbar) ---------- */
+
+.top-bar {
+    -fx-background-color:
+        /* glossy highlight streak across the top half */
+        linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.15) 48%, rgba(255,255,255,0) 50%),
+        /* base chrome gradient */
+        linear-gradient(to bottom, #cdeeff 0%, #8fd4f4 35%, #4bb0e6 55%, #2f8fd1 100%);
+    -fx-border-color: transparent transparent rgba(255,255,255,0.4) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-effect: dropshadow(gaussian, rgba(10,60,90,0.35), 10, 0, 0, 3);
+}
+
+.logo-badge {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.15) 55%, rgba(255,255,255,0) 56%),
+        radial-gradient(center 50% 40%, radius 70%, #eafcff, #7fd8f2 60%, #2f9fce);
+    -fx-background-radius: 50%, 50%;
+    -fx-border-color: rgba(255,255,255,0.85);
+    -fx-border-width: 1px;
+    -fx-border-radius: 50%;
+    -fx-min-width: 36px;
+    -fx-min-height: 36px;
+    -fx-max-width: 36px;
+    -fx-max-height: 36px;
+    -fx-alignment: center;
+    -fx-text-fill: #0c4f74;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,40,70,0.4), 4, 0, 0, 1);
+}
+
+.app-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(10,50,80,0.6), 2, 0, 0, 1);
+}
+
+.filter-tab {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 51%),
+        rgba(255,255,255,0.16);
+    -fx-background-radius: 16px, 16px;
+    -fx-border-color: rgba(255,255,255,0.45);
+    -fx-border-width: 1px;
+    -fx-border-radius: 16px;
+    -fx-text-fill: rgba(255,255,255,0.92);
+    -fx-padding: 6 16 6 16;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.filter-tab:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 51%),
+        rgba(255,255,255,0.24);
+}
+
+.filter-tab:selected {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(235,250,255,0.85) 55%, rgba(210,245,255,0.85) 56%),
+        #ffffff;
+    -fx-background-radius: 16px, 16px;
+    -fx-border-color: rgba(255,255,255,0.9);
+    -fx-text-fill: #12719e;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(20,120,180,0.55), 6, 0.2, 0, 0);
+}
+
+.pill-button {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 48%, rgba(255,255,255,0) 50%),
+        rgba(255,255,255,0.18);
+    -fx-background-radius: 18px, 18px;
+    -fx-border-color: rgba(255,255,255,0.5);
+    -fx-border-width: 1px;
+    -fx-border-radius: 18px;
+    -fx-text-fill: white;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(10,50,80,0.35), 4, 0, 0, 1);
+}
+
+.pill-button:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.12) 48%, rgba(255,255,255,0) 50%),
+        rgba(255,255,255,0.30);
+}
+
+.pill-button:pressed {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
+        rgba(255,255,255,0.12);
+}
+
+.pill-button:disabled {
+    -fx-opacity: 0.45;
+}
+
+.add-button {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.1) 48%, rgba(255,255,255,0) 50%),
+        linear-gradient(to bottom, #d4ffe8, #6de3a8 55%, #2fb87c);
+    -fx-border-color: rgba(255,255,255,0.75);
+    -fx-text-fill: #0c4a2c;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(10,90,50,0.4), 5, 0, 0, 1);
+}
+
+.add-button:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.15) 48%, rgba(255,255,255,0) 50%),
+        linear-gradient(to bottom, #e4ffef, #7fecb6 55%, #38c988);
+}
+
+.delete-button {
+    -fx-text-fill: #7a1010;
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 48%, rgba(255,255,255,0) 50%),
+        rgba(255,140,140,0.35);
+    -fx-border-color: rgba(255,255,255,0.55);
+}
+
+.delete-button:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.1) 48%, rgba(255,255,255,0) 50%),
+        rgba(255,140,140,0.5);
+}
+
+.clock-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14 6 14;
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 51%),
+        rgba(255,255,255,0.12);
+    -fx-background-radius: 14px, 14px;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-width: 1px;
+    -fx-border-radius: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(10,50,80,0.4), 2, 0, 0, 1);
+}
+
+/* ---------- Grid area ---------- */
+
+.grid-scroll, .grid-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.grid-scroll .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.grid-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color:
+        linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.25)),
+        rgba(255,255,255,0.35);
+    -fx-background-radius: 8px, 8px;
+}
+
+.grid-scroll .scroll-bar:vertical .track {
+    -fx-background-color: rgba(0,40,70,0.15);
+    -fx-background-radius: 8px;
+}
+
+.filled-tile {
+    -fx-background-color:
+        /* glossy highlight cap on the top third of the tile */
+        linear-gradient(to bottom, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.15) 38%, rgba(255,255,255,0) 42%),
+        /* base glass-blue body */
+        linear-gradient(to bottom, #7fe0f5 0%, #3fb3e6 40%, #1f83c4 75%, #0f5f9c 100%);
+    -fx-background-radius: 16px, 16px;
+    -fx-border-color: rgba(255,255,255,0.65);
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 16px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(5,40,70,0.5), 10, 0, 0, 4);
+}
+
+.filled-tile:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.2) 38%, rgba(255,255,255,0) 42%),
+        linear-gradient(to bottom, #9be9f8 0%, #52c0ee 40%, #2891cf 75%, #146ba8 100%);
+    -fx-effect: dropshadow(gaussian, rgba(5,40,70,0.6), 14, 0, 0, 5);
+}
+
+.tile-selected {
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3px;
+    -fx-border-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(120,230,255,0.9), 16, 0.35, 0, 0);
+}
+
+.tile-icon {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.1) 51%),
+        radial-gradient(center 50% 35%, radius 65%, #ffffff, #cdeffb 60%, #8fd4ee);
+    -fx-background-radius: 50%, 50%;
+    -fx-border-color: rgba(255,255,255,0.9);
+    -fx-border-width: 1px;
+    -fx-border-radius: 50%;
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+    -fx-alignment: center;
+    -fx-text-fill: #0c5079;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,40,70,0.35), 3, 0, 0, 1);
+}
+
+.tile-name {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-max-width: 130px;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(5,30,55,0.7), 2, 0, 0, 1);
+}
+
+.tile-hours {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 51%),
+        rgba(255,255,255,0.22);
+    -fx-background-radius: 10px, 10px;
+    -fx-border-color: rgba(255,255,255,0.5);
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 2 10 2 10;
+}
+
+.empty-tile {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.03) 100%),
+        rgba(255,255,255,0.04);
+    -fx-background-radius: 16px, 16px;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-radius: 16px;
+    -fx-border-style: segments(6, 6);
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+}
+
+.empty-tile:hover {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.06) 100%),
+        rgba(255,255,255,0.1);
+    -fx-border-color: rgba(255,255,255,0.65);
+}
+
+.empty-tile-plus {
+    -fx-text-fill: rgba(255,255,255,0.65);
+    -fx-font-size: 22px;
+    -fx-effect: dropshadow(gaussian, rgba(5,30,55,0.5), 2, 0, 0, 1);
+}
+
+/* ---------- Status bar ---------- */
+
+.status-bar {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.03) 100%),
+        rgba(255,255,255,0.05);
+    -fx-border-color: rgba(255,255,255,0.3) transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-label {
+    -fx-text-fill: rgba(255,255,255,0.9);
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(5,30,55,0.5), 2, 0, 0, 1);
+}
